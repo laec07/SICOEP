@@ -1,0 +1,35 @@
+.div-imagen {
+  display:inline-block;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 75px;
+  
+}
+.div-imagen img{
+  width: 75px;
+}
+
+.div-imagen > div a {
+
+position: absolute;
+
+color: #FFF;
+transition: all .6s;
+text-align: center;
+opacity: 0;
+width: 75px;
+
+}
+.txt{
+  
+}
+
+
+.div-imagen > div a:hover {
+transform: scale(1);
+opacity: 0.5;
+width: 75px;
+background: #000;
+}

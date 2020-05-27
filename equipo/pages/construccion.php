@@ -1,0 +1,1 @@
+<img src="../dist/img/construccion.jpg" class="img-fluid" width="100%">
