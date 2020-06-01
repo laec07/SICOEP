@@ -421,7 +421,7 @@ while ($fila_d=mysqli_fetch_array($depto_rutas)) {
     <div style="overflow: scroll; width: 100%">
   ';
   $c_depto=$fila_d['id_depto'];
-
+// Muestra información de las rutas por departamento
   $ruta=mysqli_query($conexion,
   "
 SELECT
