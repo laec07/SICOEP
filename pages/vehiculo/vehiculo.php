@@ -333,21 +333,30 @@ $sedes=mysqli_query($conexion,"SELECT * FROM depto where Tipo='SEDE' AND codigo_
                             <SPAN class='glyphicon glyphicon-pencil '>
                             </SPAN>
                           </a>
+
                           <a class='btn btn-info' title='Fotos' href=vehi_foto.php?placa=".$rvehiculo['Id_equipo'].">
                             <SPAN class='glyphicon glyphicon-camera '>
                             </SPAN>
                           </a>
+
                           <a class='btn btn-success' title='Accesorios' href=vehi_accesorios.php?placa=".$rvehiculo['Id_equipo'].">
                             <SPAN class='glyphicon glyphicon-list '>
                             </SPAN>
                           </a>
-                          <a class='btn btn-danger' title='Baja' data-toggle='modal' data-target='#BajaVehi'
-                            data-id_b='".$rvehiculo['Id_equipo']."'
 
-                          >
+                          <a class='btn btn-primary' title='Subir archivos' href=vehi_archivos.php?placa=".$rvehiculo['Id_equipo'].">
+                            <SPAN class='fa fa-cloud-upload'>
+                            </SPAN>
+                          </a>
+                          
+                          <a class='btn btn-danger' title='Baja' data-toggle='modal' data-target='#BajaVehi'
+                            data-id_b='".$rvehiculo['Id_equipo']."'>
                             <SPAN class='glyphicon glyphicon-trash '>
                             </SPAN>
                           </a>
+
+
+
                           $btn_react
                         </td>
                       </tr>

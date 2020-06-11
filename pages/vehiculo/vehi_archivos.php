@@ -27,17 +27,14 @@ $fecha_actual= Date("d/m/Y");
 $mes_actual= Date("m");
 $año_actual= date("Y");
 /*************************************************/
+$placa=$_GET['placa'];
 /***************************************************/
 /****************************************************/
 /***************************************************/
 /******************************************************/
 ?>
 <!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
-<html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,45 +46,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Input file -->
+  <link rel="stylesheet" href="../../dist/css/input_file.css">
    
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
-        page. However, you can choose any other skin. Make sure you
-        apply the skin class to the body tag so the changes take effect. -->
+
   <link rel="stylesheet" href="../../dist/css/skins/skin-red.min.css">
   <link rel="shortcut icon" href="../../dist/img/logo.ico" />
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+
 
   <!-- Google Font -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <!--
-BODY TAG OPTIONS:
-=================
-Apply one or more of the following classes to get the
-desired effect
-|---------------------------------------------------------|
-| SKINS         | skin-blue                               |
-|               | skin-black                              |
-|               | skin-purple                             |
-|               | skin-yellow                             |
-|               | skin-red                                |
-|               | skin-green                              |
-|---------------------------------------------------------|
-|LAYOUT OPTIONS | fixed                                   |
-|               | layout-boxed                            |
-|               | layout-top-nav                          |
-|               | sidebar-collapse                        |
-|               | sidebar-mini                            |
-|---------------------------------------------------------|
+
 -->
 <body class="hold-transition skin-red sidebar-mini">
 <div class="wrapper">
@@ -112,101 +87,7 @@ desired effect
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <!-- Messages: style can be found in dropdown.less-->
-          <!--<li class="dropdown messages-menu">-->
-            <!-- Menu toggle button -->
-            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-envelope-o"></i>
-              <span class="label label-success">4</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 4 messages</li>
-              <li>-->
-                <!-- inner menu: contains the messages -->
-               <!-- <ul class="menu">-->
-                 <!-- <li>start message -->
-                   <!-- <a href="#">
-                      <div class="pull-left">-->
-                        <!-- User Image -->
-                       <!-- <img src="dist/img/sin_foto.jpg" class="img-circle" alt="User Image">
-                      </div>-->
-                      <!-- Message title and timestamp -->
-                     <!-- <h4>
-                        Support Team
-                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                      </h4>-->
-                      <!-- The message -->
-                    <!--  <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>-->
-                  <!-- end message -->
-              <!--  </ul>-->
-                <!-- /.menu -->
-             <!-- </li>
-              <li class="footer"><a href="#">See All Messages</a></li>
-            </ul>
-          </li>-->
-          <!-- /.messages-menu -->
 
-          <!-- Notifications Menu -->
-          <!--<li class="dropdown notifications-menu">-->
-            <!-- Menu toggle button -->
-           <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-bell-o"></i>
-              <span class="label label-warning">10</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 10 notifications</li>
-              <li>-->
-                <!-- Inner Menu: contains the notifications -->
-              <!--  <ul class="menu">-->
-                  <!--<li> start notification -->
-                  <!--  <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                    </a>
-                  </li>-->
-                  <!-- end notification -->
-               <!-- </ul>
-              </li>
-              <li class="footer"><a href="#">View all</a></li>
-            </ul>
-          </li>-->
-          <!-- Tasks Menu -->
-          <!--<li class="dropdown tasks-menu">-->
-            <!-- Menu Toggle Button -->
-           <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">9</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 9 tasks</li>
-              <li>-->
-                <!-- Inner menu: contains the tasks -->
-             <!--   <ul class="menu">-->
-                 <!-- <li> Task item -->
-                 <!--   <a href="#">-->
-                      <!-- Task title and progress text -->
-                   <!--   <h3>
-                        Design some buttons
-                        <small class="pull-right">20%</small>
-                      </h3>-->
-                      <!-- The progress bar -->
-                  <!--    <div class="progress xs">-->
-                        <!-- Change the css width attribute to simulate progress -->
-                     <!--   <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
-                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">20% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>-->
-                  <!-- end task item -->
-              <!--  </ul>
-              </li>-->
-            <!--   <li class="footer">
-                <a href="#">View all tasks</a>
-              </li>
-            </ul>
           </li>-->
           <!-- User Account Menu -->
           <li class="dropdown user user-menu">
@@ -228,20 +109,7 @@ desired effect
                 </p>
               </li>
               <!-- Menu Body -->
-             <!-- <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
-                  </div>
-                </div>-->
-                <!-- /.row -->
-              <!-- </li>-->
+
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left"> 
@@ -253,10 +121,6 @@ desired effect
               </li>
             </ul>
           </li>
-          <!-- Control Sidebar Toggle Button -->
-       <!--   <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-          </li>-->
         </ul>
       </div>
     </nav>
@@ -279,17 +143,6 @@ desired effect
         </div>
       </div>
 
-      <!-- search form (Optional) 
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-          <span class="input-group-btn">
-              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-              </button>
-            </span>
-        </div>
-      </form>-->
-      <!-- /.search form -->
 
       <!-- BARRA DE MENNU -->
       
@@ -376,8 +229,67 @@ desired effect
       <!--------------------------
         | Your Page Content Here |
         -------------------------->
+        <!-- Inicia contenedor principal -->
+        <div class=" box box-danger">
+          <!-- Head -->
+          <div class="box-head">
+            <h4>Carga documentos de vehículos</h4>
+          <!-- ./ Head -->
+          </div>
+          <!--  Body -->
+          <div class="box-body">
+            <!--    column-->
+            <div  class="row">
+              <!--   firs column-->
+              <div class="col-md-6">
+                <form action="" id="form_subir">
+                  
+                  <div class="form-1-2 form-group">
+                    <div class='file-input'>
+                      <input type='file' name="archivo" class="form-control" required="">
+                      <span class='button'>Seleccionar archivo</span>
+                      <label class='label' data-js-label>No hay archivo seleccionado</label>
+                    </div>
+                    <br>
+                    <label>Observaciones</label>
+                    <input type="text" name="descripcion" class="form-control" maxlength="50" required="">
+                  </div>
 
-        
+                  <div class="barra form-group">
+                    <div class="barra_azul" id="barra_estado">
+                      <span id="perct"></span>
+                    </div>
+
+                  </div>                  
+
+                  <div class="acciones">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <input type="submit" class="btn btn-primary btn-block" value="Enviar"> 
+                      </div>
+                      <div class="col-md-4">
+                        <input type="button" class="btn btn-danger btn-block" id="cancelar" value="Cancelar"> 
+                      </div>
+                    </div>
+                  </div>
+
+                  <input type="hidden" value="<?php echo $placa ?>" name="placa" id="placa">                  
+
+                </form>
+                <!--  ./ firs column-->
+              </div>
+            <!--  ./  column-->
+            </div>
+            <!--  ./ Body -->
+          </div>
+        <!-- ./ contenedor principal -->
+        </div>
+
+        <div id="contenido"></div>
+
+       
+
+
     </section>
     <!-- /.content -->
   </div>
@@ -387,10 +299,10 @@ desired effect
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      v 2.0
+      v 2.1
     </div>
     <!-- Default to the left -->
-    <strong>&copy;laec 2018 </strong> 
+    <strong>&copy;laec 2020 </strong> 
   </footer>
 
 <!-- REQUIRED JS SCRIPTS -->
@@ -401,6 +313,8 @@ desired effect
 <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../controllers/vehiculo_archivos.js"></script>
 
 
 </body>

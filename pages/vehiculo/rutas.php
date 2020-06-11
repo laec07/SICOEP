@@ -385,9 +385,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div id="lista_rutasasignadas"></div>
 <?php
 $i=1;
-
+// trae resultado de deptos y crea un while para mostrar rutas ordenados por departamentos
 while ($fila_d=mysqli_fetch_array($depto_rutas)) {
-  
+  // calcula porcentajes y valida configuración visual a nivel depto (semaforo)
   if ($fila_d['porcentaje'] >= 50.00) {
     $labe='class="label label-success"';
     $box='class="box box-primary collapsed-box"';
@@ -398,7 +398,7 @@ while ($fila_d=mysqli_fetch_array($depto_rutas)) {
     $labe='class="label label-danger"';
     $box='class="box box-danger collapsed-box"';
   }
-  
+  //calcula excedidos a nivel depto
     $cms=$fila_d['consumido']-$fila_d['restante'];
   if (($cms >=0) && ($fila_d['restante']=0) ) {
     $excedidos="<label class='label label-danger'>|| Excedidos " .$fila_d['consumido']."</label>";
