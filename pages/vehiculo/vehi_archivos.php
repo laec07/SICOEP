@@ -29,6 +29,12 @@ $año_actual= date("Y");
 /*************************************************/
 $placa=$_GET['placa'];
 /***************************************************/
+//Busca foto
+$f=mysqli_query($conexion,"
+SELECT * FROM foto_vehi where id_equipo = '$placa'
+  ");
+$f_=mysqli_fetch_array($f);
+$pick=$f_['foto1'];
 /****************************************************/
 /***************************************************/
 /******************************************************/
@@ -233,7 +239,7 @@ $placa=$_GET['placa'];
         <div class=" box box-danger">
           <!-- Head -->
           <div class="box-head">
-            <h4>Carga documentos de vehículos</h4>
+            <h4>Carga documentos de vehículos <?php echo "$placa";  ?> </h4>
           <!-- ./ Head -->
           </div>
           <!--  Body -->
@@ -278,8 +284,17 @@ $placa=$_GET['placa'];
                 </form>
                 <!--  ./ firs column-->
               </div>
+              <!--  ./ second column-->
+              <div align="center"> 
+                  <img  style="width: 200px;" src="../../consultas/<?php echo $pick ?>"  class='img-circle'  />
+                  <br>
+                  <h2><?php echo $placa ?> </h2>
+              </div>
+              <!--  ./ second column-->
+              </div>
             <!--  ./  column-->
             </div>
+
             <!--  ./ Body -->
           </div>
         <!-- ./ contenedor principal -->
