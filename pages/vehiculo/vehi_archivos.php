@@ -203,7 +203,9 @@ $pick=$f_['foto1'];
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="usuarios.php"><i class="fa  fa-user-plus"></i>Usuarios</a></li>             
+            <li><a href="usuarios.php"><i class="fa  fa-user-plus"></i>Usuarios</a></li>
+            <li><a href="../../manuales/SICOEP-VEHICULOS.pdf" target="_blank"><i class="fa  fa-book"></i>Manual usuario - Vehiculo</a></li>
+            <li><a href="../../manuales/SICOEP-OPERATIVO.pdf" target="_blank"><i class="fa  fa-book"></i>Manual usuario - Operativo</a></li>             
           </ul>
         </li>
        <!--Nuevo -->

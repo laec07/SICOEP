@@ -195,6 +195,8 @@ desired effect
           </a>
           <ul class="treeview-menu">
             <li><a href="usuarios.php"><i class="fa  fa-user-plus"></i>Usuarios</a></li>
+            <li><a href="../../manuales/SICOEP-VEHICULOS.pdf" target="_blank"><i class="fa  fa-book"></i>Manual usuario - Vehiculo</a></li>
+            <li><a href="../../manuales/SICOEP-OPERATIVO.pdf" target="_blank"><i class="fa  fa-book"></i>Manual usuario - Operativo</a></li>
              
           </ul>
         </li>
@@ -320,10 +322,10 @@ desired effect
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      V 2.0
+      V 2.1
     </div>
     <!-- Default to the left -->
-    <strong>&copy;laec 2018 </strong> 
+    <strong>&copy;laec 2020 </strong> 
   </footer>
 
 <!-- REQUIRED JS SCRIPTS -->
