@@ -20,6 +20,11 @@ $nombre = $_FILES['archivo']['name'];
 $actual_name = pathinfo($nombre,PATHINFO_FILENAME);
 $original_name = $actual_name;
 $extension = pathinfo($nombre, PATHINFO_EXTENSION);
+//Ruta 0, valida para ser creada si no existe
+$ruta_0="files/".$placa."/";
+if(!file_exists($ruta_0)){
+     mkdir($ruta_0);
+}
 //Ruta a donde guardar archivo
 $ruta="files/".$placa."/archivos/";
 //Si no existe directorio, lo crea

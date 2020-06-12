@@ -287,11 +287,11 @@ $pick=$f_['foto1'];
               <!--  ./ second column-->
               <div align="center"> 
                   <img  style="width: 200px;" src="../../consultas/<?php echo $pick ?>"  class='img-circle'  />
-                  <br>
+                  </br>
                   <h2><?php echo $placa ?> </h2>
               </div>
               <!--  ./ second column-->
-              </div>
+        
             <!--  ./  column-->
             </div>
 
