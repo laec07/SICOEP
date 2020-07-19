@@ -113,102 +113,7 @@ desired effect
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <!-- Messages: style can be found in dropdown.less-->
-          <!--<li class="dropdown messages-menu">-->
-            <!-- Menu toggle button -->
-            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-envelope-o"></i>
-              <span class="label label-success">4</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 4 messages</li>
-              <li>-->
-                <!-- inner menu: contains the messages -->
-               <!-- <ul class="menu">-->
-                 <!-- <li>start message -->
-                   <!-- <a href="#">
-                      <div class="pull-left">-->
-                        <!-- User Image -->
-                       <!-- <img src="dist/img/sin_foto.jpg" class="img-circle" alt="User Image">
-                      </div>-->
-                      <!-- Message title and timestamp -->
-                     <!-- <h4>
-                        Support Team
-                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                      </h4>-->
-                      <!-- The message -->
-                    <!--  <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>-->
-                  <!-- end message -->
-              <!--  </ul>-->
-                <!-- /.menu -->
-             <!-- </li>
-              <li class="footer"><a href="#">See All Messages</a></li>
-            </ul>
-          </li>-->
-          <!-- /.messages-menu -->
 
-          <!-- Notifications Menu -->
-          <!--<li class="dropdown notifications-menu">-->
-            <!-- Menu toggle button -->
-           <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-bell-o"></i>
-              <span class="label label-warning">10</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 10 notifications</li>
-              <li>-->
-                <!-- Inner Menu: contains the notifications -->
-              <!--  <ul class="menu">-->
-                  <!--<li> start notification -->
-                  <!--  <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                    </a>
-                  </li>-->
-                  <!-- end notification -->
-               <!-- </ul>
-              </li>
-              <li class="footer"><a href="#">View all</a></li>
-            </ul>
-          </li>-->
-          <!-- Tasks Menu -->
-          <!--<li class="dropdown tasks-menu">-->
-            <!-- Menu Toggle Button -->
-           <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">9</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 9 tasks</li>
-              <li>-->
-                <!-- Inner menu: contains the tasks -->
-             <!--   <ul class="menu">-->
-                 <!-- <li> Task item -->
-                 <!--   <a href="#">-->
-                      <!-- Task title and progress text -->
-                   <!--   <h3>
-                        Design some buttons
-                        <small class="pull-right">20%</small>
-                      </h3>-->
-                      <!-- The progress bar -->
-                  <!--    <div class="progress xs">-->
-                        <!-- Change the css width attribute to simulate progress -->
-                     <!--   <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
-                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">20% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>-->
-                  <!-- end task item -->
-              <!--  </ul>
-              </li>-->
-            <!--   <li class="footer">
-                <a href="#">View all tasks</a>
-              </li>
-            </ul>
-          </li>-->
           <!-- User Account Menu -->
           <li class="dropdown user user-menu">
             <!-- Menu Toggle Button -->
@@ -229,20 +134,7 @@ desired effect
                 </p>
               </li>
               <!-- Menu Body -->
-             <!-- <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
-                  </div>
-                </div>-->
-                <!-- /.row -->
-              <!-- </li>-->
+
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left"> 
@@ -255,9 +147,7 @@ desired effect
             </ul>
           </li>
           <!-- Control Sidebar Toggle Button -->
-       <!--   <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-          </li>-->
+
         </ul>
       </div>
     </nav>
@@ -280,17 +170,6 @@ desired effect
         </div>
       </div>
 
-      <!-- search form (Optional) 
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-          <span class="input-group-btn">
-              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-              </button>
-            </span>
-        </div>
-      </form>-->
-      <!-- /.search form -->
 
       <!-- BARRA DE MENNU -->
       
@@ -298,18 +177,7 @@ desired effect
 
          <li class="header">MENU PRINCIPAL</li>
          <!-- 
-         <li class="active treeview">
-          <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-            <ul class="treeview-menu">
-            <li class="active"><a href="../pages/"><i class="fa fa-circle-o"></i> Dashboard</a></li>
-         
-          </ul>
-          </a>
-         </li>
+
          -->
          <li class="treeview">
           <a href="#">
@@ -326,24 +194,27 @@ desired effect
        
         <li ><a href="vehiculo.php"><i class="fa fa-car"></i><span>Vehículos</span></a></li>
         <li class="active"><a href="pilotos.php"><i class="fa fa-user"></i><span>Pilotos</span></a></li>
-        <li><a href="asignaciones.php"><i class="fa fa-edit"></i><span>Asignaciones</span></a></li>
-        <li><a href="mantenimientos.php"><i class="fa fa-wrench"></i><span>Mantenimientos</span></a></li>
-        
-       <!--
+                <!--Prueba manejo-->
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-line-chart"></i>
-            <span>Reportes</span>
+            <i class="fa fa-columns"></i>
+            <span>Prueba manejo</span>
              <i class="fa fa-angle-left pull-right"></i>
             <span class="pull-right-container">           
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="reporte_ventas.php"><i class="fa  fa-circle"></i>Ventas</a></li>
-            <li><a href="reportes_compras.php"><i class="fa  fa-circle"></i>Compras</a></li>
-            <li><a href="envios.php"><i class="fa  fa-circle"></i>Envíos</a></li>
-            <li><a href="inventario_r.php"><i class="fa  fa-circle"></i>Inventario</a></li>      
+            <li><a href="pm_prueba.php"><i class="fa  fa-file-text"></i>Prueba</a></li>
+            <li><a href="pm_aspirantes.php"><i class="fa  fa-user"></i>Aspirantes</a></li>
+            <li><a href="pm_config.php"><i class="fa  fa-gears"></i>Configuración</a></li>
+             
           </ul>
+        </li>
+        <li><a href="asignaciones.php"><i class="fa fa-edit"></i><span>Asignaciones</span></a></li>
+        <li><a href="mantenimientos.php"><i class="fa fa-wrench"></i><span>Mantenimientos</span></a></li>
+        
+       <!--
+
         </li>-->
         <li class="treeview">
           <a href="#">
@@ -378,21 +249,7 @@ desired effect
              
           </ul>
         </li>
-       <!-- <li class="header">MENU</li>-->
-        <!-- Optionally, you can add icons to the links -->
-      <!--  <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
-            <li><a href="#">Link in level 2</a></li>
-          </ul>
-        </li>-->
+
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -501,9 +358,21 @@ desired effect
                       $fila[6]<br>
                       <label $label $titulo>".$fecha."</label>
                     </td>
-                    <td>$fila[8]</td>";  
+                    <td>$fila[8] <br>$fila[15] Años</td>";  
                     echo"<td>";           
-                      echo "<a data-toggle='modal' data-target='#editUsu' data-id='" .$fila[0] ."' data-nombre='" .$fila[1] ."' data-email='" .$fila[2] ."' data-tel='" .$fila[3] ."'data-direccion='" .$fila[4] ."' data-dpi='" .$fila[5] ."'data-lic='" .$fila[6] ."'data-tipo='" .$fila[8] ."' data-fecha_venci='".$fila[13]."' class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span></a> ";      
+                      echo "<a data-toggle='modal' data-target='#editUsu' 
+                               data-id='" .$fila[0] ."' 
+                               data-nombre='" .$fila[1] ."' 
+                               data-email='" .$fila[2] ."' 
+                               data-tel='" .$fila[3] ."'
+                               data-direccion='" .$fila[4] ."' 
+                               data-dpi='" .$fila[5] ."'
+                               data-lic='" .$fila[6] ."'
+                               data-tipo='" .$fila[8] ."' 
+                               data-fecha_venci='".$fila[13]."'
+                               data-experiencia_e='".$fila[15]."' 
+
+                               class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span></a> ";      
                     echo "<a class='btn btn-danger' href='../../consultas/piloto_elimina.php?id=" .$fila[0] ."' onclick=\"return confirm('¿Esta seguro de  eliminar al piloto ".$fila[1] ." ? ')\" ><span class='glyphicon glyphicon-remove'></span></a>";   
                     echo "</td>";
                     echo "</tr>";
@@ -582,6 +451,10 @@ desired effect
                           <input type="date" name="fecha_venci" id="fecha_venci" class="form-control" value="<?php echo date('Y-m-d') ?>">
                         </div>
 
+                        <div class="form-group">
+                          <label>Experiencia(años)</label>
+                          <input type="number" name="experiencia" id="experiencia" class="form-control" max="50" step="1" >
+                        </div>
 
               <input type="submit" class="btn btn-success" value="Guardar"></input>
                        </form>
@@ -648,7 +521,11 @@ desired effect
 
                          <div class="form-group">
                           <label>Fecha vencimiento licencia</label>
-                          <input type="date" name="fecha_venci_e" id="fecha_venci_e" class="form-control" value="<?php echo date('Y-m-d') ?>">
+                          <input type="date" name="fecha_venci_e" id="fecha_venci_e" class="form-control"  ?>">
+                        </div>
+                        <div class="form-group">
+                          <label>Experiencia(años)</label>
+                          <input type="number" name="experiencia_e" id="experiencia_e" class="form-control" max="50" step="1" >
                         </div>     
 
                   <input type="submit" class="btn btn-success">             
@@ -782,6 +659,7 @@ desired effect
       var recipient6 = button.data('lic')
       var recipient7 = button.data('tipo')
       var recipient8 = button.data('fecha_venci')
+      var recipient9 = button.data('experiencia_e')
 
       var modal = $(this)    
       modal.find('.modal-body #id').val(recipient0)
@@ -792,7 +670,8 @@ desired effect
       modal.find('.modal-body #dpi').val(recipient5)
       modal.find('.modal-body #lic').val(recipient6)
       modal.find('.modal-body #tipo').val(recipient7)
-      modal.find('.modal-body #fecha_venci_e').val(recipient8)  
+      modal.find('.modal-body #fecha_venci_e').val(recipient8)
+      modal.find('.modal-body #experiencia_e').val(recipient9)   
     });
 //tae datos para guardar foto
  $('#editPick').on('show.bs.modal',function(event){

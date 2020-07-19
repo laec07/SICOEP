@@ -14,6 +14,7 @@
             $pil='Piloto';
             $estado='ACTIVO';
             $fecha_venci=$_GET['fecha_venci'];
+            $experiencia=$_GET['experiencia'];
             
             
             
@@ -21,7 +22,7 @@
             if ($no!='Seleccione tipo licencia') 
             {
 
-            	if(mysqli_query($conexion, "INSERT INTO usuarios (Usuario, DPI, Telefono, Correo_electronico, Direccion, tipo, Licencia, tipo_usu, codigo_pais, estado,fecha_vencimiento) Values ('$us','$dp','$tl','$corr','$dir','$no','$lic', '$pil','$pais', '$estado','$fecha_venci')"))
+            	if(mysqli_query($conexion, "INSERT INTO usuarios (Usuario, DPI, Telefono, Correo_electronico, Direccion, tipo, Licencia, tipo_usu, codigo_pais, estado,fecha_vencimiento, experiencia) Values ('$us','$dp','$tl','$corr','$dir','$no','$lic', '$pil','$pais', '$estado','$fecha_venci','$experiencia')"))
             	{
             	 print"
             	

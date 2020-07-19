@@ -277,7 +277,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>SICOEP</title>
   <!-- Tell the browser to be responsive to screen width -->
@@ -299,13 +299,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="shortcut icon" href="../../dist/img/logo.ico" />
     <!-- daterange picker -->
   <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.min.css">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
 
   <!-- Google Font -->
   <link rel="stylesheet"
@@ -439,6 +435,22 @@ desired effect
        
         <li><a href="vehiculo.php"><i class="fa fa-car"></i><span>Vehículos</span></a></li>
         <li><a href="pilotos.php"><i class="fa fa-user"></i><span>Pilotos</span></a></li>
+                <!--Prueba manejo-->
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-columns"></i>
+            <span>Prueba manejo</span>
+             <i class="fa fa-angle-left pull-right"></i>
+            <span class="pull-right-container">           
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pm_prueba.php"><i class="fa  fa-file-text"></i>Prueba</a></li>
+            <li><a href="pm_aspirantes.php"><i class="fa  fa-user"></i>Aspirantes</a></li>
+            <li><a href="pm_config.php"><i class="fa  fa-gears"></i>Configuración</a></li>
+             
+          </ul>
+        </li>
         <li><a href="asignaciones.php"><i class="fa fa-edit"></i><span>Asignaciones</span></a></li>
         <li class="active"><a href="mantenimientos.php"><i class="fa fa-wrench"></i><span>Mantenimientos</span></a></li>
         
@@ -1023,8 +1035,8 @@ desired effect
                     </div>
                     <div class="col-md-4">
                       <label>Tipo mantenimiento:</label>
-                      <select name="tipo" class="form-control">
-                        <option>Todos</option>
+                      <select name="tipo[]" class="form-control  select2"  multiple="multiple" style="width: 100%;  ">
+                        <option selected>Todos</option>
                  <?php
                   while ($fila_t=mysqli_fetch_array($tipo_mante_)) {
                     echo "
@@ -1036,8 +1048,8 @@ desired effect
                     </div>
                     <div class="col-md-4">
                           <label for="idequip">Placa:</label>
-                          <select name="idequip" class="form-control">
-                          <option>Todos</option>
+                          <select name="idequip[]" class="form-control  select2"  multiple="multiple" style="width: 100%;">
+                          <option selected>Todos</option>
                             <?php 
                               while($fila1=mysqli_fetch_row($placa)){
                                 echo "<option value='".$fila1['0']."'>".$fila1['0']."</option>";
@@ -1048,8 +1060,8 @@ desired effect
                         </div>
                     <div class="col-md-4">
                       <label>SEDE</label>
-                      <SELECT name="idsede" class="form-control" >
-                        <OPTION>TODOS</OPTION>
+                      <SELECT name="idsede[]" class="form-control  select2"  multiple="multiple" style="width: 100%;"  >
+                        <OPTION selected>TODOS</OPTION>
                             <?php 
                               while($fila=mysqli_fetch_row($depto)){
                                   echo "<option value='".$fila['0']."'>".$fila['1']."</option>";
@@ -1132,9 +1144,12 @@ desired effect
 <script src="../../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
 <!-- ChartJS -->
 <script src="../../bower_components/chart.js/Chart.js"></script>
-
+<!-- Select2 -->
+<script src="../../bower_components/select2/dist/js/select2.full.min.js"></script>
 
 <script >
+/////////Hace funcionar Select////////////
+  $('.select2').select2()
   //Hace funcionar los componentes de la tabla
     $(function () {
     $('#example1').DataTable()

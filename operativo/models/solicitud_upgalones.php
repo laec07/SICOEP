@@ -28,20 +28,24 @@ $total=mysqli_fetch_array($ts);
 ///se agrega consulta para IDP////
 $cidp=mysqli_query($conexion,"
 SELECT
-  tc.idp
+	*
 FROM
-  tipo_combustible tc
-INNER JOIN combustible_detalle cd ON tc.id_tipocombustible = cd.id_tipocombustible
+	tipo_combustible
 WHERE
-  cd.id_solicitud = '$id_solicitud'
-AND cd.id_ruta = '$id_ruta'
-AND id_depto = '$id_depto'
+	id_tipocombustible = '$opcion'
  ");
 $ridp=mysqli_fetch_array($cidp);
 $idp=$ridp['idp'];
+echo $idp ;
 ////////////////////////////////////
 mysqli_query($conexion,"UPDATE combustible_detalle
-SET id_tipocombustible ='$opcion',precio='$precio',total=round(precio*galones),idp=$idp*galones,total_sin_idp=total-idp,base=total_sin_idp/1.12
+SET 
+	id_tipocombustible ='$opcion',
+	precio='$precio',
+	total=round(precio*galones),
+	idp=$idp*galones,
+	total_sin_idp=total-idp,
+	base=total_sin_idp/1.12
 WHERE
   id_solicitud = '$id_solicitud'
 AND id_depto = '$id_depto'

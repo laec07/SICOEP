@@ -328,6 +328,22 @@ desired effect
         <li><a href="vehiculo.php"><i class="fa fa-car"></i><span>Vehículos</span></a></li>
         <!--Pilotos -->
         <li><a href="pilotos.php"><i class="fa fa-user"></i><span>Pilotos</span></a></li>
+                <!--Prueba manejo-->
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-columns"></i>
+            <span>Prueba manejo</span>
+             <i class="fa fa-angle-left pull-right"></i>
+            <span class="pull-right-container">           
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pm_prueba.php"><i class="fa  fa-file-text"></i>Prueba</a></li>
+            <li><a href="pm_aspirantes.php"><i class="fa  fa-user"></i>Aspirantes</a></li>
+            <li><a href="pm_config.php"><i class="fa  fa-gears"></i>Configuración</a></li>
+             
+          </ul>
+        </li>
         <!--Asignaciones -->
         <li><a href="asignaciones.php"><i class="fa fa-edit"></i><span>Asignaciones</span></a></li>
         <!--Mantenimientos -->

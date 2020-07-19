@@ -28,34 +28,36 @@ $mes_actual= Date("m");
 $año_actual= date("Y");
 $fi=$_POST['inicio'];
 $ff=$_POST['fin'];
-$v_tipo=$_POST['tipo'];
-$v_placa=$_POST['idequip'];
-$sede=$_POST['idsede'];
+
+$v_tipo="'". implode("','", $_POST['tipo'])."'";
+$v_placa="'". implode("','", $_POST['idequip'])."'";
+$sede="'". implode("','", $_POST['idsede'])."'";
 
 /**********************************************************************************************************/
-if ($v_tipo=='Todos') {
+if ($v_tipo=="'Todos'") {
   $var_tipo="";
   $var2_tipo="";
 }else{
-  $var_tipo="AND t.id_tipomantenimiento='$v_tipo'";
-  $var2_tipo="AND id_tipomantenimiento='$v_tipo'";
+  $var_tipo="AND t.id_tipomantenimiento in ($v_tipo)";
+  $var2_tipo="AND id_tipomantenimiento in ($v_tipo)";
 }
 
-if ($v_placa=='Todos') {
+if ($v_placa=="'Todos'") {
   $var_placa="";
   $var2_placa="";
 }else{
-  $var_placa="AND mv.Id_equipo='$v_placa'";
-  $var2_placa="AND Id_equipo='$v_placa'";
+  $var_placa="AND mv.Id_equipo in ($v_placa)";
+  $var2_placa="AND Id_equipo in ($v_placa)";
 }
 
-if ($sede=='TODOS') {
+if ($sede=="'TODOS'") {
   $sede_b="";
   $sede_b2="";
 }else{
-  $sede_b="AND a.Id_depto='$sede' ";
-  $sede_b2="AND Id_depto='$sede' ";
+  $sede_b="AND a.Id_depto in ($sede) ";
+  $sede_b2="AND Id_depto in ($sede) ";
 }
+echo $var2_tipo;
 /**********************************************************************************************************/ 
 ////////////////////////////
 $depto=mysqli_query($conexion, "SELECT * FROM depto WHERE Tipo='SEDE' and codigo_pais='$pais' and usa_vehi='S'" );
@@ -353,7 +355,8 @@ $tipo_mante_e=mysqli_query($conexion,"SELECT * from tipo_mantenimiento where est
     <!-- daterange picker -->
   <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
 
-
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.min.css">
 
   <!-- Google Font -->
   <link rel="stylesheet"
@@ -507,6 +510,22 @@ desired effect
        
         <li><a href="vehiculo.php"><i class="fa fa-car"></i><span>Vehículos</span></a></li>
         <li><a href="pilotos.php"><i class="fa fa-user"></i><span>Pilotos</span></a></li>
+                <!--Prueba manejo-->
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-columns"></i>
+            <span>Prueba manejo</span>
+             <i class="fa fa-angle-left pull-right"></i>
+            <span class="pull-right-container">           
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pm_prueba.php"><i class="fa  fa-file-text"></i>Prueba</a></li>
+            <li><a href="pm_aspirantes.php"><i class="fa  fa-user"></i>Aspirantes</a></li>
+            <li><a href="pm_config.php"><i class="fa  fa-gears"></i>Configuración</a></li>
+             
+          </ul>
+        </li>
         <li><a href="asignaciones.php"><i class="fa fa-edit"></i><span>Asignaciones</span></a></li>
         <li class="active"><a href="mantenimientos.php"><i class="fa fa-wrench"></i><span>Mantenimientos</span></a></li>
         
@@ -653,18 +672,18 @@ desired effect
                       <td>".$fila['no_fact']."</td>
                       <td>".$fila['costo']."</td>
                       <td><a data-toggle='modal' data-target='#editMante' class='btn btn-warning'
-                         data-ide=".$fila['ID']."
-                          data-placa=".$fila['Id_equipo']."
-                          data-fecha=".$fila['Fecha']."
-                          data-tipo=".$fila['id_tipomantenimiento']."
-                          data-kilometro=".$fila['Kilometrajem']."
-                          data-obser=".$fila['Observaciones']."
-                          data-proveedor=".$fila['id_proveedor']."
+                         data-ide='".$fila['ID']."''
+                          data-placa='".$fila['Id_equipo']."''
+                          data-fecha='".$fila['Fecha']."''
+                          data-tipo='".$fila['id_tipomantenimiento']."''
+                          data-kilometro='".$fila['Kilometrajem']."''
+                          data-obser='".$fila['Observaciones']."''
+                          data-proveedor='".$fila['id_proveedor']."''
                           
-                          data-costo=".$fila['costo']."
-                          data-costo_uni=".$fila['costo_unitario']."
-                          data-no_fact=".$fila['no_fact']."
-                          data-serie_fact=".$fila['serie_fact']."
+                          data-costo='".$fila['costo']."''
+                          data-costo_uni='".$fila['costo_unitario']."''
+                          data-no_fact='".$fila['no_fact']."''
+                          data-serie_fact='".$fila['serie_fact']."'
 
                       ><span class='glyphicon glyphicon-pencil'></span></a>
                       <a data-toggle='modal' href='../../consultas/mante_vehi_elimina.php?ID=".$fila['ID']."'onclick=\"return confirm('¿Esta seguro de  eliminar este gasto?')\" class='btn btn-danger'><span class='glyphicon glyphicon-remove'></span></a></td>
@@ -1118,8 +1137,8 @@ desired effect
                     </div>
                     <div class="col-md-4">
                       <label>Tipo mantenimiento:</label>
-                      <select name="tipo" class="form-control">
-                        <option>Todos</option>
+                      <select name="tipo[]" class="form-control  select2"  multiple="multiple" style="width: 100%;" >
+                        <option selected>Todos</option>
                  <?php
                   while ($fila_t=mysqli_fetch_array($tipo_mante_)) {
                     echo "
@@ -1131,8 +1150,8 @@ desired effect
                     </div>
                     <div class="col-md-4">
                           <label for="idequip">Placa:</label>
-                          <select name="idequip" class="form-control">
-                          <option>Todos</option>
+                          <select name="idequip[]" class="form-control  select2"  multiple="multiple" style="width: 100%;">
+                          <option selected>Todos</option>
                             <?php 
                               while($fila1=mysqli_fetch_row($placa)){
                                 echo "<option value='".$fila1['0']."'>".$fila1['0']."</option>";
@@ -1143,8 +1162,8 @@ desired effect
                         </div>
                     <div class="col-md-4">
                       <label>SEDE</label>
-                      <SELECT name="idsede" class="form-control" >
-                        <OPTION>TODOS</OPTION>
+                      <SELECT name="idsede[]" class="form-control  select2"  multiple="multiple" style="width: 100%;" >
+                        <OPTION selected>TODOS</OPTION>
                             <?php 
                               while($fila=mysqli_fetch_row($depto)){
                                   echo "<option value='".$fila['0']."'>".$fila['1']."</option>";
@@ -1203,8 +1222,11 @@ desired effect
 <script src="../../bower_components/chart.js/Chart.js"></script>
 <!-- FastClick -->
 <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
-
+<!-- Select2 -->
+<script src="../../bower_components/select2/dist/js/select2.full.min.js"></script>
 <script >
+  /////////Hace funcionar Select////////////
+  $('.select2').select2()
   //Hace funcionar los componentes de la tabla
     $(function () {
     $('#example1').DataTable()

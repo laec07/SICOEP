@@ -139,21 +139,20 @@ $porcentaje =($porcent['restante'] * 100) / $porcent['asignado'];
   <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
-  <!-- Select2 -->
-  <link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
-        page. However, you can choose any other skin. Make sure you
-        apply the skin class to the body tag so the changes take effect. -->
+
   <link rel="stylesheet" href="../../dist/css/skins/skin-red.min.css">
   <link rel="shortcut icon" href="../../dist/img/logo.ico" />
 
       <!-- DataTables -->
   <link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.min.css">
   <!-- Google Font -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
 </head>
 
 <body class="hold-transition skin-red sidebar-mini">
@@ -259,6 +258,22 @@ $porcentaje =($porcent['restante'] * 100) / $porcent['asignado'];
         <li><a href="vehiculo.php"><i class="fa fa-car"></i><span>Vehículos</span></a></li>
         <!--Pilotos -->
         <li><a href="pilotos.php"><i class="fa fa-user"></i><span>Pilotos</span></a></li>
+                <!--Prueba manejo-->
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-columns"></i>
+            <span>Prueba manejo</span>
+             <i class="fa fa-angle-left pull-right"></i>
+            <span class="pull-right-container">           
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pm_prueba.php"><i class="fa  fa-file-text"></i>Prueba</a></li>
+            <li><a href="pm_aspirantes.php"><i class="fa  fa-user"></i>Aspirantes</a></li>
+            <li><a href="pm_config.php"><i class="fa  fa-gears"></i>Configuración</a></li>
+             
+          </ul>
+        </li>
         <!--Asignaciones -->
         <li><a href="asignaciones.php"><i class="fa fa-edit"></i><span>Asignaciones</span></a></li>
         <!--Mantenimientos -->

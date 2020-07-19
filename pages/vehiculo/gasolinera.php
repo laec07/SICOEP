@@ -195,6 +195,22 @@ desired effect
         <li><a href="vehiculo.php"><i class="fa fa-car"></i><span>Vehículos</span></a></li>
         <!--Pilotos -->
         <li><a href="pilotos.php"><i class="fa fa-user"></i><span>Pilotos</span></a></li>
+                <!--Prueba manejo-->
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-columns"></i>
+            <span>Prueba manejo</span>
+             <i class="fa fa-angle-left pull-right"></i>
+            <span class="pull-right-container">           
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pm_prueba.php"><i class="fa  fa-file-text"></i>Prueba</a></li>
+            <li><a href="pm_aspirantes.php"><i class="fa  fa-user"></i>Aspirantes</a></li>
+            <li><a href="pm_config.php"><i class="fa  fa-gears"></i>Configuración</a></li>
+             
+          </ul>
+        </li>
         <!--Asignaciones -->
         <li><a href="asignaciones.php"><i class="fa fa-edit"></i><span>Asignaciones</span></a></li>
         <!--Mantenimientos -->
@@ -250,6 +266,7 @@ desired effect
             <?php echo $empresa['empresa']; ?>
             <small>VEHICULO</small>
           </h3>
+         <a class="btn btn-warning"><span class="fa fa-edit"></span> Hola</a>
         </div>
          <div class="col-md-1">
           <a href="" class="btn btn-primary" data-target='#NuevoGas' data-toggle='modal' title="Agregar nueva gasolinera"><i class="fa fa-plus"></i> Nuevo</a>
