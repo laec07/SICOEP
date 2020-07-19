@@ -57,7 +57,7 @@ if ($sede=="'TODOS'") {
   $sede_b="AND a.Id_depto in ($sede) ";
   $sede_b2="AND Id_depto in ($sede) ";
 }
-echo $var2_tipo;
+
 /**********************************************************************************************************/ 
 ////////////////////////////
 $depto=mysqli_query($conexion, "SELECT * FROM depto WHERE Tipo='SEDE' and codigo_pais='$pais' and usa_vehi='S'" );
