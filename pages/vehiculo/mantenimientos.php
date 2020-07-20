@@ -15,6 +15,7 @@ if ($busca_foto=="") {
   $foto='../../consultas/'.$_SESSION['usuario']['foto'];
 }
 /*******************************************************************************************/
+mysqli_set_charset($conexion,"utf8");
 $datos_empresa=mysqli_query($conexion,"SELECT * FROM empresa where id_empresa='$em'");
 $empresa=mysqli_fetch_array($datos_empresa);
 $pais=$_SESSION['usuario']['codigo_pais'];
@@ -277,10 +278,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html>
 <head>
-  <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+  <meta charset=UTF-8″ />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>SICOEP</title>
   <!-- Tell the browser to be responsive to screen width -->
+    <!-- Select2 -->
+  <link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.min.css">
   <meta content="width=device-width" name="viewport">
   <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
 
@@ -288,19 +291,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
       <!-- DataTables -->
   <link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
-        page. However, you can choose any other skin. Make sure you
-        apply the skin class to the body tag so the changes take effect. -->
+
   <link rel="stylesheet" href="../../dist/css/skins/skin-red.min.css">
   <link rel="shortcut icon" href="../../dist/img/logo.ico" />
     <!-- daterange picker -->
   <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
-  <!-- Select2 -->
-  <link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.min.css">
 
 
   <!-- Google Font -->
@@ -1035,7 +1034,7 @@ desired effect
                     </div>
                     <div class="col-md-4">
                       <label>Tipo mantenimiento:</label>
-                      <select name="tipo[]" class="form-control  select2"  multiple="multiple" style="width: 100%;  ">
+                      <select name="tipo[]" class="form-control  select2"  multiple="multiple" style="width:100%;" data-style="btn-info">
                         <option selected>Todos</option>
                  <?php
                   while ($fila_t=mysqli_fetch_array($tipo_mante_)) {
@@ -1048,7 +1047,7 @@ desired effect
                     </div>
                     <div class="col-md-4">
                           <label for="idequip">Placa:</label>
-                          <select name="idequip[]" class="form-control  select2"  multiple="multiple" style="width: 100%;">
+                          <select name="idequip[]" class="form-control  select2"  multiple="multiple" style="width: 100%;" data-style="btn-info">
                           <option selected>Todos</option>
                             <?php 
                               while($fila1=mysqli_fetch_row($placa)){
@@ -1060,7 +1059,7 @@ desired effect
                         </div>
                     <div class="col-md-4">
                       <label>SEDE</label>
-                      <SELECT name="idsede[]" class="form-control  select2"  multiple="multiple" style="width: 100%;"  >
+                      <SELECT name="idsede[]" class="form-control  select2"  multiple="multiple" style="width: 100%;" data-style="btn-info" >
                         <OPTION selected>TODOS</OPTION>
                             <?php 
                               while($fila=mysqli_fetch_row($depto)){

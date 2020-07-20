@@ -39,7 +39,8 @@ SELECT
 	p.criterio2,
 	p.criterio3,
 	p.total,
-	p.estatus
+	p.estatus,
+	u.tipo_usu
 FROM
 	pm_pruebapiloto p
 INNER JOIN usuarios u ON p.Id_usuario=u.Id_usuario
@@ -118,6 +119,13 @@ LIMIT 20
 				<?php
 				
 				while ($fila_f=mysqli_fetch_array($query_f)) {
+
+					if ($fila_f['total']>60 && $fila_f['tipo_usu']=='Aspirante') {
+						$ctr="<a class='btn btn-primary' onclick='contrata(".$fila_f['Id_usuario'].")' ><span class='fa fa-chevron-circle-right'></span></a>";
+					}else{
+						$ctr="";
+					}
+
 					echo "
 					<tr>
 						<th>".$fila_f['id_prueba']."</th>
@@ -129,6 +137,7 @@ LIMIT 20
 						<th>
 							<a class='btn btn-warning' target=_blank href='../../views/pm_pdf.php?id=".$fila_f['id_prueba']."'><span class='fa fa-print'></span></a>
 							<a class='btn btn-danger' onclick='delete_test(".$fila_f['id_prueba'].")' ><span class='fa fa-trash'></span></a>
+							$ctr
 						</th>
 					</tr>
 					";

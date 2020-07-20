@@ -5,10 +5,13 @@ $id=$_POST['id'];
 
 $cris=mysqli_query($conexion,"
 SELECT
-  p.id_criterio
+  p.id_criterio,
+  c.descripcion,
+  c.calificacion
 FROM
   pm_pruebapiloto_detalle pd
 INNER JOIN pm_pregunta p ON p.id_pregunta = pd.id_pregunta
+INNER JOIN pm_criterio c ON p.id_criterio = c.id_criterio
 WHERE
   id_prueba = '$id'
 GROUP BY

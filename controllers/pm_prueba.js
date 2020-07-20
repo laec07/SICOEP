@@ -149,10 +149,34 @@ function delete_test(id){
 
 	var preg = confirm ("¿Esta seguro de eliminar prueba ID  "+ id +"?")
 
-	if (preg??true) {
+	if (preg==true) {
 
 		$.ajax({
 			url:"../../consultas/pm_deletest.php",
+			type:"POST",
+			dataType:"html",
+			data:{id:id},
+			beforeSend: function(){
+				$("#content_test").html("<img src = '../../dist/images/loading4.gif' width='50px'  >");
+			},
+			success:function(data){
+				$("#content_test").html(data);
+				body_test()
+			}
+		})
+	}else{
+
+	}
+}
+
+function contrata(id){
+
+	var preg = confirm ("¿Esta seguro cambiar estado de aspirante a piloto?")
+
+	if (preg==true) {
+
+		$.ajax({
+			url:"../../consultas/pm_contrata.php",
 			type:"POST",
 			dataType:"html",
 			data:{id:id},

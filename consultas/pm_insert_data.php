@@ -63,7 +63,7 @@ if ($estado=='ACTIVO') {//Inicia If 0
 	{
 		PRINT "Ocurrio error mientras se insertaba registro.";
 	}//finaliza eslse if 1
-echo $id_usuario;
+echo $idt;
 }//finaliza If 0
 else
 {

@@ -15,6 +15,7 @@ if ($busca_foto=="") {
    $foto='../../consultas/'.$_SESSION['usuario']['foto'];
 }
 /*******************************************************************************************/
+mysqli_set_charset($conexion,"utf8");
 $datos_empresa=mysqli_query($conexion,"SELECT * FROM empresa where id_empresa='$em'");
 $empresa=mysqli_fetch_array($datos_empresa);
 $pais=$_SESSION['usuario']['codigo_pais'];
@@ -336,6 +337,8 @@ $tipo_mante_e=mysqli_query($conexion,"SELECT * from tipo_mantenimiento where est
   <title>SICOEP</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width" name="viewport">
+    <!-- Select2 -->
+  <link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.min.css">
   <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Estilo para fotos -->
   <link rel="stylesheet" href="../../bower_components/foto/foto.css">
@@ -355,8 +358,7 @@ $tipo_mante_e=mysqli_query($conexion,"SELECT * from tipo_mantenimiento where est
     <!-- daterange picker -->
   <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
 
-  <!-- Select2 -->
-  <link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.min.css">
+
 
   <!-- Google Font -->
   <link rel="stylesheet"
